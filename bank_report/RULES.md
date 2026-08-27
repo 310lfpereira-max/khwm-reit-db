@@ -52,10 +52,17 @@ multiplying the 3-month fee by four.
 
 ## 4. Repairs above $2,500 — capital, excluded
 
-- Any repair **greater than $2,500** is treated as a **capital expense**.
+- The test is applied **per transaction**. The transaction itself identifies
+  what it is — the description/account will say **repair**.
+- Any single repair transaction **greater than $2,500** is treated as a
+  **capital expense**.
 - Capital items are **ignored** — excluded from operating expenses and therefore
-  excluded from NOI.
-- Repairs of $2,500 or less remain operating expenses (R&M).
+  excluded from NOI. The **whole transaction** drops out, not just the amount
+  above $2,500.
+- Repair transactions of $2,500 or less remain operating expenses (R&M).
+- No grouping is applied: transactions are not rolled up by job, vendor, or unit
+  before testing. Each repair transaction stands on its own against the
+  threshold.
 
 ## 5. Rent and parking — from the rent roll, not annualized
 
@@ -136,9 +143,9 @@ here as they are identified, and the ×4 result stands unadjusted until then.
 | Management fee | 5% of total income | 5% of annualized total income |
 | Utilities | $261 / bedroom / year ÷ 4 | $261 × bedrooms |
 | General & administrative | Budget | Budget |
-| Repairs & maintenance | T3 actual, excluding any single repair > $2,500 | T3 (net of capital items) × 4 |
+| Repairs & maintenance | T3 actual, excluding any repair transaction > $2,500 | T3 (net of capital items) × 4 |
 | All other operating expenses | T3 actual | T3 × 4 |
-| Capital items (repairs > $2,500) | Excluded | Excluded |
+| Capital items (repair transactions > $2,500) | Excluded | Excluded |
 | One-time costs (turnover, snow true-up, legal, marketing, bank fees) | Excluded | Excluded |
 | Bad debt | Excluded | Excluded |
 
@@ -159,16 +166,14 @@ here as they are identified, and the ×4 result stands unadjusted until then.
 
 Flagged, not assumed — each of these moves the numbers:
 
-1. **Repair threshold basis** — is the $2,500 test applied per **invoice**, per
-   **work order**, or per **line item**? Current assumption: per invoice/charge.
-2. **Which 3 months** — trailing 3 closed months, or a fixed calendar quarter?
+1. **Which 3 months** — trailing 3 closed months, or a fixed calendar quarter?
    Current assumption: trailing 3 closed months.
-3. **Rent roll as-of date** — which date drives "in place," and how far forward
+2. **Rent roll as-of date** — which date drives "in place," and how far forward
    does a "future contract" count (any signed lease, or only those commencing
    within the next 12 months)?
-4. **Bedroom count source** — rent roll unit mix, and is it total bedrooms in
+3. **Bedroom count source** — rent roll unit mix, and is it total bedrooms in
    the property regardless of occupancy?
-5. **Utilities scope** — does $261/bedroom replace *all* utility accounts
+4. **Utilities scope** — does $261/bedroom replace *all* utility accounts
    (water/sewer, gas, electric, trash), or only those the landlord pays
    directly, with any master-metered account handled separately?
 
@@ -180,6 +185,9 @@ Flagged, not assumed — each of these moves the numbers:
 - Added rules 6–9 (utilities per bedroom, G&A at budget, one-time cost
   exclusion, bad debt exclusion); management fee base refined from total income
   to **effective income**; annualization stated explicitly as its own rule.
+- Repair capitalization test confirmed as **per transaction**, identified by
+  the transaction being labeled a repair; the whole transaction is excluded, and
+  transactions are not grouped before testing.
 - Management fee base confirmed as the **total income line** (rent + parking +
   other income), with no vacancy deduction.
 - Removed an incorrectly added vacancy allowance line: there is no vacancy
