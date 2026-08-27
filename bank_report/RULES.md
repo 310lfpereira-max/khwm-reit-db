@@ -100,8 +100,12 @@ Instead:
 ## 9. Bad debt — excluded
 
 - Bad debt / credit loss is **excluded** as a separate expense line.
-- Rationale: credit loss is already captured within the **vacancy allowance**,
-  so carrying both would double count it.
+- Rationale: credit loss is already captured within the vacancy inherent in the
+  rent roll, so carrying both would double count it.
+- Note: there is **no separate vacancy allowance line**. Rent is taken from the
+  rent roll as in-place and contracted rent (Rule 5), so a vacant unit with no
+  contract contributes zero — vacancy is captured by the rent roll itself, not
+  by a deduction.
 
 ## 10. Additional 12-month-only exclusions
 
@@ -123,7 +127,6 @@ here as they are identified, and the ×4 result stands unadjusted until then.
 |---|---|---|
 | Rent | T3 actual (budget if held < 3 months) | Rent roll: contracted rent if a future contract exists, else in-place rent, × 12 |
 | Parking | T3 actual (budget if held < 3 months) | Rent roll: contracted parking if a future contract exists, else in-place, × 12 |
-| Vacancy allowance | Per underwriting (also absorbs credit loss — see Rule 9) | Per underwriting |
 | Other income | T3 actual | T3 × 4 |
 | Utility reimbursement income | Not shown separately — netted into Rule 6 | Not shown separately |
 | **Effective income** | Basis for the management fee (Rule 3) | Basis for the management fee |
@@ -153,9 +156,9 @@ here as they are identified, and the ×4 result stands unadjusted until then.
 
 Flagged, not assumed — each of these moves the numbers:
 
-1. **Effective income definition** — confirm it is gross potential rent less
-   vacancy (and concessions), plus other income. Does "other income" belong in
-   the 5% management fee base, or is the fee charged on rental income only?
+1. **Effective income definition** — rent (per the rent roll) plus parking plus
+   other income; no vacancy deduction. Does "other income" belong in the 5%
+   management fee base, or is the fee charged on rent and parking only?
 2. **Repair threshold basis** — is the $2,500 test applied per **invoice**, per
    **work order**, or per **line item**? Current assumption: per invoice/charge.
 3. **Which 3 months** — trailing 3 closed months, or a fixed calendar quarter?
@@ -163,12 +166,9 @@ Flagged, not assumed — each of these moves the numbers:
 4. **Rent roll as-of date** — which date drives "in place," and how far forward
    does a "future contract" count (any signed lease, or only those commencing
    within the next 12 months)?
-5. **Vacancy allowance rate and source** — Rule 9 relies on it absorbing credit
-   loss, so the rate needs to be stated: underwriting standard, actual, or
-   market?
-6. **Bedroom count source** — rent roll unit mix, and is it total bedrooms in
+5. **Bedroom count source** — rent roll unit mix, and is it total bedrooms in
    the property regardless of occupancy?
-7. **Utilities scope** — does $261/bedroom replace *all* utility accounts
+6. **Utilities scope** — does $261/bedroom replace *all* utility accounts
    (water/sewer, gas, electric, trash), or only those the landlord pays
    directly, with any master-metered account handled separately?
 
@@ -180,6 +180,9 @@ Flagged, not assumed — each of these moves the numbers:
 - Added rules 6–9 (utilities per bedroom, G&A at budget, one-time cost
   exclusion, bad debt exclusion); management fee base refined from total income
   to **effective income**; annualization stated explicitly as its own rule.
+- Removed an incorrectly added vacancy allowance line: there is no vacancy
+  deduction, as the rent roll's in-place and contracted rent already reflects
+  which units are occupied.
 - Confirmed the derivation order: apply the 3-month rules first, then × 4 for
   the 12-month column. Added Rule 10 as a placeholder for 12-month-only
   exclusions, and clarified that the management fee is recomputed per column
