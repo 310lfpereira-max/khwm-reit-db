@@ -88,6 +88,9 @@ is simply: recorded contract beats in-place rent.
 - Utilities are **not** taken from actuals and **not** annualized from the
   quarter. They are underwritten at a fixed rate.
 - **Net landlord utility cost = $261 per bedroom per year.**
+- The **bedroom count is a given input** — it is provided with the property
+  data, not derived from the rent roll or inferred from the unit mix. Multiply
+  the supplied count by $261.
 - Basis: on properties where tenant utility reimbursements are billed back,
   reimbursements recover approximately **45% of total utility expense**; the
   $261/bedroom figure is the residual landlord share net of that recovery.
@@ -176,9 +179,7 @@ Flagged, not assumed — each of these moves the numbers:
    Current assumption: trailing 3 closed months.
 2. **Rent roll as-of date** — which date drives "in place"? (The future-contract
    window is settled: any recorded contract counts.)
-3. **Bedroom count source** — rent roll unit mix, and is it total bedrooms in
-   the property regardless of occupancy?
-4. **Utilities scope** — does $261/bedroom replace *all* utility accounts
+3. **Utilities scope** — does $261/bedroom replace *all* utility accounts
    (water/sewer, gas, electric, trash), or only those the landlord pays
    directly, with any master-metered account handled separately?
 
@@ -190,6 +191,7 @@ Flagged, not assumed — each of these moves the numbers:
 - Added rules 6–9 (utilities per bedroom, G&A at budget, one-time cost
   exclusion, bad debt exclusion); management fee base refined from total income
   to **effective income**; annualization stated explicitly as its own rule.
+- Bedroom count for the utilities calculation is a supplied input.
 - Future contracts: any recorded contract on the rent roll is used, with no
   time limit and regardless of current occupancy.
 - Repair capitalization test confirmed as **per transaction**, identified by
