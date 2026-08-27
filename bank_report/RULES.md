@@ -34,17 +34,20 @@ Two categories override the ×4 default:
 - **Additional 12-month-only exclusions (Rule 10):** anything that survives
   the quarter but should still come out of the annualized bucket.
 
-**The management fee is recomputed, never annualized.** Because rent, parking,
-and utilities differ between the two columns, 12-month effective income is not
-simply the quarter × 4 — so take 5% of *each* column's own effective income
-rather than multiplying the 3-month fee by four.
+**The management fee is recomputed, never annualized.** Because rent and
+parking differ between the two columns, 12-month total income is not simply the
+quarter × 4 — so take 5% of *each* column's own total income rather than
+multiplying the 3-month fee by four.
 
-## 3. Management fee — 5% of effective income
+## 3. Management fee — 5% of total income
 
 - Do **not** use the actual management fee expense recorded in the ledger.
-- Management fee = **Effective income × 5.0%**.
-- Applies in both columns: 5% of quarterly effective income in the T3 column,
-  5% of annualized effective income in the 12-month column, so the fee scales
+- Management fee = **Total income × 5.0%**.
+- The base is the **total income line** — rent (per the rent roll), parking,
+  and other income. Every income dollar on the statement is in the fee base;
+  nothing is carved out.
+- Applies in both columns: 5% of quarterly total income in the T3 column, 5% of
+  annualized total income in the 12-month column, so the fee scales
   consistently with income.
 
 ## 4. Repairs above $2,500 — capital, excluded
@@ -129,8 +132,8 @@ here as they are identified, and the ×4 result stands unadjusted until then.
 | Parking | T3 actual (budget if held < 3 months) | Rent roll: contracted parking if a future contract exists, else in-place, × 12 |
 | Other income | T3 actual | T3 × 4 |
 | Utility reimbursement income | Not shown separately — netted into Rule 6 | Not shown separately |
-| **Effective income** | Basis for the management fee (Rule 3) | Basis for the management fee |
-| Management fee | 5% of effective income | 5% of annualized effective income |
+| **Total income** | Rent + parking + other income; basis for the fee (Rule 3) | Same |
+| Management fee | 5% of total income | 5% of annualized total income |
 | Utilities | $261 / bedroom / year ÷ 4 | $261 × bedrooms |
 | General & administrative | Budget | Budget |
 | Repairs & maintenance | T3 actual, excluding any single repair > $2,500 | T3 (net of capital items) × 4 |
@@ -147,8 +150,8 @@ here as they are identified, and the ×4 result stands unadjusted until then.
 3. Overlay the lines that have their own 12-month treatment — rent and parking
    from the rent roll, utilities at $261/bedroom, G&A at budget.
 4. Remove any **12-month-only exclusions** (Rule 10).
-5. Compute the **management fee last**, at 5% of the resulting effective
-   income, separately in each column.
+5. Compute the **management fee last**, at 5% of the resulting total income,
+   separately in each column.
 
 ---
 
@@ -156,19 +159,16 @@ here as they are identified, and the ×4 result stands unadjusted until then.
 
 Flagged, not assumed — each of these moves the numbers:
 
-1. **Effective income definition** — rent (per the rent roll) plus parking plus
-   other income; no vacancy deduction. Does "other income" belong in the 5%
-   management fee base, or is the fee charged on rent and parking only?
-2. **Repair threshold basis** — is the $2,500 test applied per **invoice**, per
+1. **Repair threshold basis** — is the $2,500 test applied per **invoice**, per
    **work order**, or per **line item**? Current assumption: per invoice/charge.
-3. **Which 3 months** — trailing 3 closed months, or a fixed calendar quarter?
+2. **Which 3 months** — trailing 3 closed months, or a fixed calendar quarter?
    Current assumption: trailing 3 closed months.
-4. **Rent roll as-of date** — which date drives "in place," and how far forward
+3. **Rent roll as-of date** — which date drives "in place," and how far forward
    does a "future contract" count (any signed lease, or only those commencing
    within the next 12 months)?
-5. **Bedroom count source** — rent roll unit mix, and is it total bedrooms in
+4. **Bedroom count source** — rent roll unit mix, and is it total bedrooms in
    the property regardless of occupancy?
-6. **Utilities scope** — does $261/bedroom replace *all* utility accounts
+5. **Utilities scope** — does $261/bedroom replace *all* utility accounts
    (water/sewer, gas, electric, trash), or only those the landlord pays
    directly, with any master-metered account handled separately?
 
@@ -180,6 +180,8 @@ Flagged, not assumed — each of these moves the numbers:
 - Added rules 6–9 (utilities per bedroom, G&A at budget, one-time cost
   exclusion, bad debt exclusion); management fee base refined from total income
   to **effective income**; annualization stated explicitly as its own rule.
+- Management fee base confirmed as the **total income line** (rent + parking +
+  other income), with no vacancy deduction.
 - Removed an incorrectly added vacancy allowance line: there is no vacancy
   deduction, as the rent roll's in-place and contracted rent already reflects
   which units are occupied.
