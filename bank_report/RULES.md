@@ -11,6 +11,10 @@ Status: **draft — rules 1–10 captured, more to come.**
 ## 1. Actual column — trailing 3 months (T3)
 
 - The "Actual" column is built from **3 months of actual operating data** (T3).
+- **The period is a supplied input.** The statements and the applicable quarter
+  are provided with the data — the quarter is never inferred from the file or
+  picked by calendar convention. If it has not been stated, ask which quarter
+  before building the report.
 - **Exception — short hold period:** if the property has been held for **less
   than 3 months**, use **budget** numbers instead of actuals for the periods not
   owned. Budget substitutes for the missing months so the column always
@@ -175,11 +179,9 @@ here as they are identified, and the ×4 result stands unadjusted until then.
 
 Flagged, not assumed — each of these moves the numbers:
 
-1. **Which 3 months** — trailing 3 closed months, or a fixed calendar quarter?
-   Current assumption: trailing 3 closed months.
-2. **Rent roll as-of date** — which date drives "in place"? (The future-contract
+1. **Rent roll as-of date** — which date drives "in place"? (The future-contract
    window is settled: any recorded contract counts.)
-3. **Utilities scope** — does $261/bedroom replace *all* utility accounts
+2. **Utilities scope** — does $261/bedroom replace *all* utility accounts
    (water/sewer, gas, electric, trash), or only those the landlord pays
    directly, with any master-metered account handled separately?
 
@@ -191,6 +193,7 @@ Flagged, not assumed — each of these moves the numbers:
 - Added rules 6–9 (utilities per bedroom, G&A at budget, one-time cost
   exclusion, bad debt exclusion); management fee base refined from total income
   to **effective income**; annualization stated explicitly as its own rule.
+- Reporting quarter is a supplied input — ask for it rather than inferring it.
 - Bedroom count for the utilities calculation is a supplied input.
 - Future contracts: any recorded contract on the rent roll is used, with no
   time limit and regardless of current occupancy.
