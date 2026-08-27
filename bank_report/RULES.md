@@ -77,6 +77,12 @@ Instead:
 - **Parking** = same treatment: future contracted parking rent where one exists,
   otherwise the in-place parking rent, annualized × 12.
 
+**Which future contracts count: all of them.** Wherever a future contract
+appears on the rent roll, if it is recorded, use it. There is no time limit —
+a lease commencing next month and one commencing well out both count, and it
+makes no difference whether the unit is currently occupied or vacant. The rule
+is simply: recorded contract beats in-place rent.
+
 ## 6. Utilities — $261 per bedroom per year (net landlord cost)
 
 - Utilities are **not** taken from actuals and **not** annualized from the
@@ -135,8 +141,8 @@ here as they are identified, and the ×4 result stands unadjusted until then.
 
 | Line item | T3 / Actual column | 12-month column |
 |---|---|---|
-| Rent | T3 actual (budget if held < 3 months) | Rent roll: contracted rent if a future contract exists, else in-place rent, × 12 |
-| Parking | T3 actual (budget if held < 3 months) | Rent roll: contracted parking if a future contract exists, else in-place, × 12 |
+| Rent | T3 actual (budget if held < 3 months) | Rent roll: any recorded future contract, else in-place rent, × 12 |
+| Parking | T3 actual (budget if held < 3 months) | Rent roll: any recorded future contract, else in-place, × 12 |
 | Other income | T3 actual | T3 × 4 |
 | Utility reimbursement income | Not shown separately — netted into Rule 6 | Not shown separately |
 | **Total income** | Rent + parking + other income; basis for the fee (Rule 3) | Same |
@@ -168,9 +174,8 @@ Flagged, not assumed — each of these moves the numbers:
 
 1. **Which 3 months** — trailing 3 closed months, or a fixed calendar quarter?
    Current assumption: trailing 3 closed months.
-2. **Rent roll as-of date** — which date drives "in place," and how far forward
-   does a "future contract" count (any signed lease, or only those commencing
-   within the next 12 months)?
+2. **Rent roll as-of date** — which date drives "in place"? (The future-contract
+   window is settled: any recorded contract counts.)
 3. **Bedroom count source** — rent roll unit mix, and is it total bedrooms in
    the property regardless of occupancy?
 4. **Utilities scope** — does $261/bedroom replace *all* utility accounts
@@ -185,6 +190,8 @@ Flagged, not assumed — each of these moves the numbers:
 - Added rules 6–9 (utilities per bedroom, G&A at budget, one-time cost
   exclusion, bad debt exclusion); management fee base refined from total income
   to **effective income**; annualization stated explicitly as its own rule.
+- Future contracts: any recorded contract on the rent roll is used, with no
+  time limit and regardless of current occupancy.
 - Repair capitalization test confirmed as **per transaction**, identified by
   the transaction being labeled a repair; the whole transaction is excluded, and
   transactions are not grouped before testing.
