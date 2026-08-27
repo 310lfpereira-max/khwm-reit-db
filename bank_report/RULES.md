@@ -16,13 +16,28 @@ Status: **draft — rules 1–10 captured, more to come.**
   owned. Budget substitutes for the missing months so the column always
   represents a full 3-month period.
 
-## 2. Annualization — quarterly actuals × 4
+## 2. Annualization — build the 3-month column first, then × 4
 
-- The 12-month income statement is the **quarterly (T3) actuals multiplied by
-  four**.
-- This is the default treatment for every line item **except** where a specific
-  rule below overrides it: rent and parking (Rule 5), management fee (Rule 3),
-  utilities (Rule 6), and G&A (Rule 7).
+The two columns are derived in sequence, not independently:
+
+1. **Build the 3-month column** by applying every T3 rule — exclude capital
+   repairs (Rule 4), one-time costs (Rule 8), and bad debt (Rule 9) at this
+   stage, so the quarter is already clean.
+2. **Multiply the resulting 3-month figures by four** to get the 12-month
+   column.
+
+Two categories override the ×4 default:
+
+- **Lines with their own 12-month treatment:** rent and parking (Rule 5,
+  from the rent roll), utilities (Rule 6, per bedroom), G&A (Rule 7, at
+  budget), and the management fee (Rule 3, recomputed — see below).
+- **Additional 12-month-only exclusions (Rule 10):** anything that survives
+  the quarter but should still come out of the annualized bucket.
+
+**The management fee is recomputed, never annualized.** Because rent, parking,
+and utilities differ between the two columns, 12-month effective income is not
+simply the quarter × 4 — so take 5% of *each* column's own effective income
+rather than multiplying the 3-month fee by four.
 
 ## 3. Management fee — 5% of effective income
 
@@ -88,6 +103,18 @@ Instead:
 - Rationale: credit loss is already captured within the **vacancy allowance**,
   so carrying both would double count it.
 
+## 10. Additional 12-month-only exclusions
+
+- Beyond the exclusions already applied in the quarter (Rules 4, 8, 9), the
+  12-month bucket may carry **further exclusions of its own** — items that
+  legitimately belong in the trailing quarter but should not be carried into
+  the annualized run rate.
+- Any such item is removed **after** the ×4 step, from the 12-month column
+  only; the 3-month actual column keeps it.
+
+**To be populated.** No 12-month-only exclusions are defined yet — list them
+here as they are identified, and the ×4 result stands unadjusted until then.
+
 ---
 
 ## Line-item treatment summary
@@ -109,11 +136,16 @@ Instead:
 | One-time costs (turnover, snow true-up, legal, marketing, bank fees) | Excluded | Excluded |
 | Bad debt | Excluded | Excluded |
 
-**Order of operations for the 12-month column:** strip exclusions first
-(capital repairs, one-time costs, bad debt), then annualize the remainder ×4,
-then overlay the rule-driven lines (rent/parking from the rent roll, utilities
-per bedroom, G&A at budget), and compute the management fee last off the
-resulting effective income.
+**Order of operations:**
+
+1. Strip exclusions from the quarter — capital repairs, one-time costs, bad
+   debt (Rules 4, 8, 9). This produces the **3-month column**.
+2. Multiply that clean quarter **× 4**.
+3. Overlay the lines that have their own 12-month treatment — rent and parking
+   from the rent roll, utilities at $261/bedroom, G&A at budget.
+4. Remove any **12-month-only exclusions** (Rule 10).
+5. Compute the **management fee last**, at 5% of the resulting effective
+   income, separately in each column.
 
 ---
 
@@ -148,3 +180,7 @@ Flagged, not assumed — each of these moves the numbers:
 - Added rules 6–9 (utilities per bedroom, G&A at budget, one-time cost
   exclusion, bad debt exclusion); management fee base refined from total income
   to **effective income**; annualization stated explicitly as its own rule.
+- Confirmed the derivation order: apply the 3-month rules first, then × 4 for
+  the 12-month column. Added Rule 10 as a placeholder for 12-month-only
+  exclusions, and clarified that the management fee is recomputed per column
+  rather than annualized.
